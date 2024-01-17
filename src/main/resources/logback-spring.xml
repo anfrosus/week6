@@ -6,12 +6,12 @@
         </encoder>
     </appender>
 
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/logs/myApp.log</file>
-        <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-    </appender>
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>/logs/myApp.log</file>-->
+<!--        <encoder>-->
+<!--            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
 
     <appender name="SLACK" class="com.github.maricn.logback.SlackAppender">
         <webhookUri>https://hooks.slack.com/services/..</webhookUri>
@@ -48,8 +48,8 @@
     </appender>
 
     <logger name="com.example.week6.Main1" level="DEBUG" additivity="true">
-        <appender-ref ref="FILE" />
-        <appender-ref ref="ASYNC" />
+<!--        <appender-ref ref="FILE" />-->
+<!--        <appender-ref ref="ASYNC" />-->
         <appender-ref ref="CLOUDWATCH" />
     </logger>
 
